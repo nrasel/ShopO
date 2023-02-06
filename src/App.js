@@ -4,7 +4,10 @@ import "./App.css";
 import Cart from "./common/Cart/Cart";
 import Footer from "./common/footer/Footer";
 import Header from "./common/header/Header";
+import Account from "./components/Account/Account";
 import Data from "./components/Data";
+import Support from "./components/Support/Support";
+import TrackOrder from "./components/TrackOrder/TrackOrder";
 import Sdata from "./components/shops/Sdata";
 import Pages from "./pages/Pages";
 
@@ -72,6 +75,15 @@ function App() {
       <Router>
         <Header CartItem={CartItem} />
         <Switch>
+          <Route path="/account" exact>
+            <Account />
+          </Route>
+          <Route path="/trackorder" exact>
+            <TrackOrder />
+          </Route>
+          <Route path="/support" exact>
+            <Support />
+          </Route>
           <Route path="/" exact>
             <Pages
               productItems={productItems}
